@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <h1>Wellcome <%=user?.name%></h1>
+    <a href="/logout">Logout</a>
+
+    <%if(user && user.image){%>
+
+    <div style="width: 100px; height: auto">
+      <img src="<%=user?.image%>" alt="image" style="width: 100%" />
+    </div>
+
+    <%}else{%>
+    <a href="/upload">upload image</a>
+    <%}%>
+  </body>
+</html>
